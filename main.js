@@ -34,6 +34,11 @@ const drawLine = () => {
   context.lineTo(c, d);
   context.stroke();
   context.closePath();
+
+  context.strokeStyle = getColor();
+  context.lineWidth = 4;
+  context.lineCap = "round";
+
 }
 
 const stopDrawing = () => {
@@ -58,3 +63,5 @@ const handlePointerDown = (e) => {
   recordPointerLocation(e);
   draw = true;
 }
+
+const getColor = () => { return document.querySelector(".color").value };
