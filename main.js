@@ -18,6 +18,7 @@ const init = () => {
   canvas.onpointerdown = handlePointerDown;
   canvas.onpointerup = stopDrawing;
   canvas.onpointerout = stopDrawing;
+  document.querySelector(".clear").onclick = clearCanvas;
 }
 // creates the original line from the pointer path
 const drawLine = () => {
@@ -65,3 +66,9 @@ const handlePointerDown = (e) => {
 }
 
 const getColor = () => { return document.querySelector(".color").value };
+
+const clearCanvas = () => {
+  if (confirm("Would you like to clear the canvas?")) {
+    context.clearRect(0, 0, w, h);
+  }
+}
