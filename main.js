@@ -46,3 +46,15 @@ const recordPointerLocation = (e) => {
   currX = e.clientX - canvas.offsetLeft;
   currY = e.clientY - canvas.offsetTop;
 }
+
+const handlePointerMove = (e) => {
+  if (draw) {
+    recordPointerLocation(e);
+    drawLine();
+  }
+}
+
+const handlePointerDown = (e) => {
+  recordPointerLocation(e);
+  draw = true;
+}
