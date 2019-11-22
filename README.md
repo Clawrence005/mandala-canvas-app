@@ -10,7 +10,7 @@ From tutorial ............
 - CSS
 - Javascript
 
-## [Click here to play the game](https://clawrence005.github.io/Word-Guess-Game/) 
+## [Click here to play the game](https://clawrence005.github.io/mandala-canvas-app/) 
 
 gif/video goes here
 
