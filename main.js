@@ -37,6 +37,16 @@ const drawLine = () => {
   context.moveTo(a, b);
   context.lineTo(c, d);
   //draws first shadow line reflects across the x axis
+  // context.moveTo(a_, b_);
+  // context.lineTo(c_, d_);
+  context.stroke();
+  context.closePath();
+
+  context.beginPath();
+  // draws original line
+  // context.moveTo(a, b);
+  // context.lineTo(c, d);
+  //draws first shadow line reflects across the x axis
   context.moveTo(a_, b_);
   context.lineTo(c_, d_);
   context.stroke();
