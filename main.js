@@ -22,17 +22,23 @@ const init = () => {
 }
 // creates the original line from the pointer path
 const drawLine = () => {
-  let a = prevX,
-    b = prevY,
-    c = currX,
-    d = currY;
+  let
+    // first : original, second x-reflected
+    a = prevX, a_ = a,
+    b = prevY, b_ = h - b,
+    c = currX, c_ = c,
+    d = currY, d_ = h - d;
 
   context.lineWidth = 4;
   context.lineCap = "round";
 
   context.beginPath();
+  // draws original line
   context.moveTo(a, b);
   context.lineTo(c, d);
+  //draws first shadow line reflects across the x axis
+  context.moveTo(a_, b_);
+  context.lineTo(c_, d_);
   context.stroke();
   context.closePath();
 
